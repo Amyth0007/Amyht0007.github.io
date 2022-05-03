@@ -72,7 +72,7 @@ const Signup = (props) => {
                             <div className="dsb">
 
                                 <div>
-                                    <Link to="#">pahilyaa pasun account aahe</Link>
+                                    <Link to="/login">Already have an account</Link>
                                 </div>
                             </div>
                             <div>

@@ -105,7 +105,7 @@ const Login = (props) => {
             <div className="dsb">
                 
                 <div>
-                    <Link to="#">Forget password</Link>
+                    <Link to="/signup">Dont have an account..click here to make it</Link>
                 </div>
             </div>
             <div>

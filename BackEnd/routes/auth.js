@@ -9,6 +9,7 @@ const JWT_SECRET = "amitisgoodboy";
 
 
 //Route 3 create a user using : POST "/api/auth/createuser" . doesnt require auth
+
 router.post('/createuser' ,[
     // username must be an email
   body('name' , "Enter the valid name").isLength({ min: 3 }),
@@ -16,6 +17,7 @@ router.post('/createuser' ,[
   // password must be at least 5 chars long
   body('password' , "eneter the valid password it must be atleast 5 characters").isLength({ min: 5 }),
 ], async(req , res)=>{
+    console.log(req.body);
     let success = false;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -92,7 +94,7 @@ router.post('/login' ,[
 router.post('/getuser' ,fetchuser, async(req , res)=>{
   
 try {
-    userId = req.user.id;
+   let userId = req.user.id;
     const user = await User.findById(userId).select("-password")
     res.send(user);
     

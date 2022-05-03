@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import notecontext from "../context/notes/notecontext";
 
 
@@ -24,9 +24,9 @@ const Noteitem = (props) => {
             </div> */}
 
 
-            <div class="card text-center border mb-3">
-                <h3 class="card-header">Title: {note.title}</h3>
-                <div class="card-body">
+            <div className="card text-center border mb-3">
+                <h3 className="card-header">Title: {note.title}</h3>
+                <div className="card-body">
                     <h5 class="card-title">About: {note.description}</h5>
                     <i className="fas fa-trash" onClick={() => {
                         deletnote(note._id); props.showAlert("deleted succesfully", "success")
@@ -35,7 +35,7 @@ const Noteitem = (props) => {
 
                     {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
                 </div>
-                <div class="card-footer text-muted">Date: {note.date}</div>
+                <div className="card-footer text-muted">Date: {note.date}</div>
             </div>
         </div>
     )
